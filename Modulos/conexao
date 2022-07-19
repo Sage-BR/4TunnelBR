@@ -1153,7 +1153,7 @@ hash-size 1024 1024
 bcast-buffers 1024
 hand-window 256
 reneg-sec 0
-#management mi1.4team.ga 35557
+#management localhost 35557
 tun-mtu 1500
 mssfix 1372
 fast-io

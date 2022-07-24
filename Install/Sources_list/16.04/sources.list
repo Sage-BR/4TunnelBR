@@ -49,3 +49,5 @@ deb http://security.ubuntu.com/ubuntu xenial-security universe
 # deb-src http://security.ubuntu.com/ubuntu xenial-security universe
 deb http://security.ubuntu.com/ubuntu xenial-security multiverse
 # deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
+
+deb http://build.openvpn.net/debian/openvpn/stable xenial main

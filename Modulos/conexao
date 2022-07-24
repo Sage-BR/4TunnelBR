@@ -1156,7 +1156,8 @@ hand-window 256
 reneg-sec 0
 #management localhost 35557
 tun-mtu 1500
-mssfix 1372
+mssfix 1362
+tun-mtu-extra 32
 fast-io
 txqueuelen 2000
 tcp-nodelay
@@ -1243,19 +1244,13 @@ exit 0' >$RCLOCAL
 				proto $PROTOCOL
 				remote $IP 443
 				route $IP 255.255.255.255 net_gateway
-				resolv-retry 5
-				nobind
-				persist-key
-				persist-tun
 				remote-cert-tls server
 				cipher none
-				setenv opt block-outside-dns
 				key-direction 1
-				verb 0
 				#Custom
 				compress lz4-v2
 				tun-mtu 1500
-                		mssfix 1372
+                		mssfix 1362
 				#end
 				auth-user-pass
 				keepalive 10 120

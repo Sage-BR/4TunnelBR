@@ -279,6 +279,13 @@ pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 useradd -e $final -M -s /bin/rbash -p $pass $username >/dev/null 2>&1 &
 echo "$password" >/etc/SSHPlus/senha/$username
 echo "$username $sshlimiter" >>/root/usuarios.db
+mkdir /home/4tunnel
+mkdir /home/4tunnel/bin
+cd /home/4tunnel/
+touch .profile
+ln -s /bin/uptime /home/4tunnel/bin
+chown root. /home/4tunnel/.profile
+chmod 755 /home/4tunnel/.profile 
 [[ -e /etc/openvpn/server.conf ]] && {
 	echo -ne "\033[1;32mGerar Arquivo Ovpn \033[1;31m? \033[1;33m[s/n]:\033[1;37m "; read resp
 	[[ "$resp" = @(s|S) ]] && {
